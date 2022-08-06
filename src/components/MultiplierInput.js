@@ -1,9 +1,17 @@
-function MultiplierInput(multiplier) {
+function MultiplierInput({name, updateInit, updateFinal}) {
   return (
     <div>
-      <label>{multiplier.name}</label>
-      <input type="number" placeholder="BEFORE"></input>
-      <input type="number" placeholder="AFTER"></input>
+      <label>{name}</label>
+      <input
+        type='number'
+        placeholder='BEFORE'
+        onChange={updateInit}
+      />
+      <input
+        type='number'
+        placeholder='AFTER'
+        onChange={updateFinal}
+      />
     </div>
   );
 }
